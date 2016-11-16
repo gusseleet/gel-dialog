@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gel-dialog plugin</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous">
+
+    </script>
+    <script src="gel-dialog.js"></script>
+    <script src="main.js"></script>
+
+</head>
+<body>
+<h1> Testing </h1>
+
+
+<h3> Using default attributes</h3>
+<ul>
+    <li>
+        title: &lt;h2&gt; Wow! Amazing! &lt;/h2&gt;
+    </li>
+    <li>
+        text: 'This is so awesome!'
+    </li>
+    <li>
+        backgroundColorInnerDiv: '#fff',
+    </li>
+    <li>
+        colorInnerDiv: '#000000'
+    </li>
+    <li>
+        background: 0,0,0,0.75
+    </li>
+</ul>
+
+<a class="btn" id="dialog-1" href="#">Open dialog #1</a>
+
+
+
+<h3> Using custom attributes</h3>
+<ul>
+    <li>
+        title: &lt;h1&gt; Wow, custom attributes! &lt;/h1&gt;
+    </li>
+    <li>
+        text: 'I love it!'
+    </li>
+    <li>
+        backgroundColorInnerDiv: '#2E8A4B',
+    </li>
+    <li>
+        colorInnerDiv: '#75D192'
+    </li>
+    <li>
+        background: 255,0,255,0.75
+    </li>
+</ul>
+
+<a class="btn" id="dialog-2" href="#">Open dialog #2</a>
+
+</body>
+</html>
