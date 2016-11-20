@@ -60,9 +60,6 @@
         this.after(parentDiv);
         var $jO = $('#' + uniqueId);
 
-        console.log(this);
-
-
         $jO.append(childDiv);
         $(uniqueIdChild).append(config.title,
             config.text, closeButton);
@@ -78,7 +75,6 @@
         $jO.css('background', config.background);
 
         function onOpen(e){
-            console.log(this);
             $jO.fadeIn(350);
             e.preventDefault();
         }
