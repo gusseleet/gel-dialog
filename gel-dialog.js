@@ -14,7 +14,7 @@
         var uniqueIdChild = '#inner-' + uniqueId;
         var parentDiv = "<div class='popup " + uniqueId + "'id=" + uniqueId + '></div>';
         var childDiv = "<div class ='popup-inner' id='inner-" + uniqueId +"'></div>";
-        var closeButton = "<a class='popup-close' href='#'>x</a>";
+        var closeButton = "<a class='popup-close' id='close-" + uniqueId +  "'href='#'>x</a>";
 
         var config = $.extend({
 
@@ -47,9 +47,9 @@
             colorInnerDiv: '#000000',
 
             /**
-             * Color of the outer dialog, use rgba.
+             * Color of the outer dialog
              * @type String
-             * @default 0,0,0,0.75
+             * @default rgba(0,0,0,0.75)'
              */
             background: '0,0,0,0.75',
 
@@ -60,24 +60,31 @@
         this.after(parentDiv);
         var $jO = $('#' + uniqueId);
 
+        console.log(this);
+
+
         $jO.append(childDiv);
         $(uniqueIdChild).append(config.title,
             config.text, closeButton);
 
+        var $close = $('#close-' + uniqueId);
+
         this.on('click', onOpen);
-        $jO.on('click', onClose);
+
+        $close.on('click', onClose);
 
         $(uniqueIdChild).css('background', config.backgroundColorInnerDiv);
         $(uniqueIdChild).css('color', config.colorInnerDiv);
         $jO.css('background', config.background);
 
         function onOpen(e){
+            console.log(this);
             $jO.fadeIn(350);
             e.preventDefault();
         }
 
         function onClose(e) {
-            jQuery(this).fadeOut(350);
+            $jO.fadeOut(350);
             e.preventDefault();
 
         }

@@ -12,5 +12,5 @@ $(document).ready(function() {
         colorInnerDiv: '#75D192',
         background: '255,0,255,0.75'
     });
-
+    
 });
